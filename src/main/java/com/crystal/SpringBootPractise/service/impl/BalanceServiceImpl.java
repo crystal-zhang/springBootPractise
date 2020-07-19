@@ -1,5 +1,6 @@
 package com.crystal.SpringBootPractise.service.impl;
 
+import com.crystal.SpringBootPractise.aop.AddLog;
 import com.crystal.SpringBootPractise.domain.Balance;
 import com.crystal.SpringBootPractise.mapper.BalanceMapper;
 import com.crystal.SpringBootPractise.service.IBalanceService;
@@ -11,6 +12,7 @@ public class BalanceServiceImpl implements IBalanceService {
     @Autowired
     private BalanceMapper balanceMapper;
     @Override
+    @AddLog(comment = "测试AOP")
     public Balance getBalance(int id) {
         return balanceMapper.getBalance(1);
     }
