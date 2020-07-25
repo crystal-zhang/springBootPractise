@@ -7,5 +7,5 @@ import java.math.BigDecimal;
 public class Balance {
     private int id;
     private String username;
-    private BigDecimal UserBalance;
+    private BigDecimal userBalance;
 }

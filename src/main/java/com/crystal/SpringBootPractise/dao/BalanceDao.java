@@ -5,6 +5,6 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface BalanceMapper {
+public interface BalanceDao {
     Balance getBalance(@Param("id") int id);
 }

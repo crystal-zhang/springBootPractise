@@ -24,6 +24,7 @@ public class MainController {
     @GetMapping("/getBalance")
     public Balance getBalance(){
        Balance balance = balanceService.getBalance(1);
+        log.info("查询结果:{}",balance);
        return balance;
     }
 }

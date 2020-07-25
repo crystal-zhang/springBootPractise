@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @SpringBootApplication
 @EnableWebMvc
-@MapperScan("com.crystal.SpringBootPractise.mapper")
+@MapperScan("com.crystal.SpringBootPractise.dao")
 public class SpringBootPractiseApplication {
 
 	public static void main(String[] args) {

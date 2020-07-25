@@ -1,0 +1,34 @@
+<configuration
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://ch.qos.logback/xml/ns/logback " debug="true">
+    <!-- <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener"/> -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+  <!--  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>myApp.log</file>
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>-->
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+    <!--   <logger name="controller" level="DEBUG" additivity="false"> -->
+    <!--   <appender-ref ref="STDOUT"/> -->
+    <!--   </logger> -->
+    <!--   <logger name="org.mybatis.spring.SqlSessionUtils" level="error" additivity="false"> -->
+    <!--   <appender-ref ref="STDOUT"/> -->
+    <!--   </logger> -->
+    <logger name="com.ibatis" level="DEBUG"/>
+    <logger name="com.ibatis.common.jdbc.SimpleDataSource" level="DEBUG"/>
+    <logger name="com.ibatis.common.jdbc.ScriptRunner" level="DEBUG"/>
+    <logger name="com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate" level="DEBUG"/>
+    <logger name="java.sql.Connection" level="DEBUG"/>
+    <logger name="java.sql.Statement" level="DEBUG"/>
+    <logger name="java.sql.PreparedStatement" level="DEBUG"/>
+    <logger name="com.crystal.SpringBootPractise.dao" level="DEBUG"></logger>
+
+</configuration>

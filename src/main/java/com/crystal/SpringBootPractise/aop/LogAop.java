@@ -21,10 +21,11 @@ public class LogAop {
 
 
     @Around("pointCut()&&@annotation(addLog)")
-    public void Around(ProceedingJoinPoint joinPoint,AddLog addLog) throws Throwable {
+    public Object Around(ProceedingJoinPoint joinPoint,AddLog addLog) throws Throwable {
       log.info("在方法调用前执行的切面方法");
-      System.out.println("在方法调用前执行的切面方法"+joinPoint.getSignature());
-        joinPoint.proceed();
-        System.out.println("在方法调用前执行的切面方法"+addLog.comment());
+         Object obj = joinPoint.proceed();
+        log.info("方法调用之后执行:{}",addLog.comment());
+        return obj;
+
     }
 }
