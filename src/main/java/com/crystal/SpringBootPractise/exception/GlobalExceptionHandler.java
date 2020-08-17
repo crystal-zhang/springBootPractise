@@ -27,7 +27,7 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
  * @author Administrator
  *
  */
-@RestControllerAdvice
+/*@RestControllerAdvice*/
 @Slf4j
 public class GlobalExceptionHandler  {
 	@Autowired

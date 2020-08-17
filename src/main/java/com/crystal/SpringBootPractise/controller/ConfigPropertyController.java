@@ -3,6 +3,7 @@ package com.crystal.SpringBootPractise.controller;
 import com.crystal.SpringBootPractise.domain.ConfigProperty;
 import com.crystal.SpringBootPractise.service.IConfigPropertyService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,6 +11,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/property")
 public class ConfigPropertyController {
+    @Autowired
+    private RedisTemplate<String,String> redisTemplate;
     @Autowired
     private IConfigPropertyService configPropertyService;
 

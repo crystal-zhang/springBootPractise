@@ -11,7 +11,7 @@ public class HttpResult<T> {
 	/**
 	 * 返回数据
 	 */
-	private T Data;
+	private T data;
 	/**
 	 * 是否成功标志位
 	 */
