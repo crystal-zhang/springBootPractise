@@ -17,7 +17,7 @@ public class LogFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         //过滤掉静态资源请求
-        String resquest = IOUtils.toString(servletRequest.getInputStream(), "utf-8");
+        //String resquest = IOUtils.toString(servletRequest.getInputStream(), "utf-8");
        log.info("请求日志:{}",servletRequest);
        filterChain.doFilter(servletRequest,servletResponse);
        log.info("响应日志:{}",servletResponse.getOutputStream());

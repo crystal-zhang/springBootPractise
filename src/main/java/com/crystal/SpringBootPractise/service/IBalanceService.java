@@ -4,4 +4,5 @@ import com.crystal.SpringBootPractise.domain.Balance;
 
 public interface IBalanceService {
     Balance getBalance(int id);
+    public void testTrans();
 }

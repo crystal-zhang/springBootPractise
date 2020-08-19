@@ -27,4 +27,9 @@ public class MainController {
         log.info("查询结果:{}",balance);
        return balance;
     }
+
+    @GetMapping("/trans")
+    public void testTrans(){
+       balanceService.testTrans();
+    }
 }

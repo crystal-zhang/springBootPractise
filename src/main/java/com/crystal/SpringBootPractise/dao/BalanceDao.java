@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BalanceDao {
     Balance getBalance(@Param("id") int id);
+
+    void updateBalance(Balance balance);
 }
