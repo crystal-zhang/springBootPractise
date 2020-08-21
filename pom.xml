@@ -101,6 +101,12 @@
 			<version>1.2.72</version>
 		</dependency>
 
+		<!-- sharding-jdbc-core 分库分表-->
+		<dependency>
+			<groupId>io.shardingsphere</groupId>
+			<artifactId>sharding-jdbc-core</artifactId>
+			<version>3.1.0</version>
+		</dependency>
 
 
 	</dependencies>

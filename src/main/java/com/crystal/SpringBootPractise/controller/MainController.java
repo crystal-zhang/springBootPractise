@@ -1,6 +1,8 @@
 package com.crystal.SpringBootPractise.controller;
 
+import com.crystal.SpringBootPractise.dao.OrderDao;
 import com.crystal.SpringBootPractise.domain.Balance;
+import com.crystal.SpringBootPractise.domain.Order;
 import com.crystal.SpringBootPractise.service.IBalanceService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,8 @@ import java.time.LocalDateTime;
 public class MainController {
     @Autowired
     private IBalanceService balanceService;
+    @Autowired
+    private OrderDao orderDao;
     @GetMapping("/getTime")
     public String getTime(String name){
         String time = LocalDateTime.now().toString();
@@ -26,5 +30,17 @@ public class MainController {
        Balance balance = balanceService.getBalance(1);
         log.info("查询结果:{}",balance);
        return balance;
+    }
+
+    @PostMapping("testSharding")
+    public String testSharding(){
+        Order order = null;
+        for(long i=0;i<20;i++){
+            order = new Order();
+            order.setOrderId(i);
+            order.setUserId(i);
+            orderDao.addOrder(order);
+        }
+        return "success";
     }
 }
