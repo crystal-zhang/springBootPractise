@@ -1,5 +1,6 @@
 package com.crystal.SpringBootPractise;
 
+import org.activiti.spring.boot.SecurityAutoConfiguration;
 import org.mybatis.spring.annotation.MapperScan;
 import org.mybatis.spring.annotation.MapperScans;
 import org.springframework.boot.SpringApplication;
@@ -9,7 +10,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-@SpringBootApplication(exclude  = DataSourceAutoConfiguration.class)
+@SpringBootApplication(exclude = SecurityAutoConfiguration.class)
 @EnableWebMvc
 @MapperScan("com.crystal.SpringBootPractise.dao")
 public class SpringBootPractiseApplication {

@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @Slf4j
@@ -42,5 +45,12 @@ public class MainController {
             orderDao.addOrder(order);
         }
         return "success";
+    }
+
+
+    @PostMapping("getOrder")
+    public List<Order> getOrder(){
+        List<Order> list = orderDao.getOrderList();
+        return list;
     }
 }

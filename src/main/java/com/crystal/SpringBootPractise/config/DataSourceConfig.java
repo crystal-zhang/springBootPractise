@@ -21,7 +21,7 @@ import java.util.Properties;
  * 数据库配置
  * 分库分表
  */
-@Configuration
+//@Configuration
 public class DataSourceConfig {
 @Bean
     DataSource getShardingDataSource() throws SQLException {

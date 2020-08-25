@@ -107,6 +107,12 @@
 			<artifactId>sharding-jdbc-core</artifactId>
 			<version>3.1.0</version>
 		</dependency>
+<!--工作流-->
+		<dependency>
+			<groupId>org.activiti</groupId>
+			<artifactId>activiti-spring-boot-starter-basic</artifactId>
+			<version>6.0.0</version>
+		</dependency>
 
 
 	</dependencies>
